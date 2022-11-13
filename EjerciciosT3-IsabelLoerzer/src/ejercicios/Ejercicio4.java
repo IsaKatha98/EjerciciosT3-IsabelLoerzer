@@ -8,6 +8,12 @@ public class Ejercicio4 {
 	 * mediante un algoritmo ineficiente pero sencillo: desde el menor de a y b, ir buscando, de forma decreciente, el primer 
 	 * número que divide a ambos simultáneamente. Teniendo en cuenta lo que se acaba de explicar, realiza un programa que 
 	 * calcule el máximo común divisor de dos números.
+	 * 
+	 * Las pruebas que se realizarán en este ejercicio son las siguientes.
+	 * 
+	 * - Introducir un valor 0 y se espera que salte el mensaje de error.
+	 * - Introducir valores númericos donde numA (18) sea mayor que numB(12) y nos dé el mcd correcto (6).
+	 * - Introducir valores númericos donde numA (12) sea menor que numB(18) y nos dé el mcd correcto (6).
 	 */
 
 	public static void main(String[] args) {
@@ -16,7 +22,7 @@ public class Ejercicio4 {
 		
 	int numA;
 	int numB;
-	int divisor;
+	int divisor=0;
 	
 	/*Creamos un escáner para poder leer los datos que introduzca el usuario por
 	la consola. */
@@ -34,41 +40,31 @@ public class Ejercicio4 {
 	//Instrucciones. Primero, establecemos una condición en la que debe ocurrir que  ambos números son distintos de 0.
 	
 	if (numA!=0&&numB!=0) {
-		
-		//Establecemos que los números introducidos sean distintos entre sí.
-		while (numB!=numA) {
 	
-		//En el caso de que A sea mayor que B.
-		if (numA<numB) {	
+		//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.
 		
-			//Establecemos un for 
+		
+			for (int i=1; i<=numA; i++) {
 			
-			for (int i=numB; i>=1; i--) {
+			//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
+			
+				if (numA%i==0&&numB%i==0) {
 				
-				int aux;
-				
-				aux=numB;
-				
-				aux%i=0;
-				
-				
-				
-				
-				
-		
+					divisor=i;
+				}
 			}
-		}
 		
-		if (numB<numA) {
-			
-		}
 		
-			
-		}
+		//Imprimimos el resultado del bucle for.
+		
+		System.out.println("El máximo común divisor es: "+divisor);
 	
+	//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.
+		
 	} else {
 		
-		System.out.println("Ha introducido un número no válido.");
+		System.out.println("Ha introducido valores no válidos.");
+		
 	}
 	
 	//Por último, cerramos el escáner.
