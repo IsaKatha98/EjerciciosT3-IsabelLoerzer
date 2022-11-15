@@ -64,7 +64,7 @@ public class Ejercicio10 {
 	        if(num == inverso){
 	            System.out.println("Es capicúa.");
 	            
-	        }else{
+	        } else{
 	            System.out.println("No es capicúa.");
 	           
 	        }

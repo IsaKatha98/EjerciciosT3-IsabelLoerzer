@@ -53,7 +53,7 @@ public class Ejercicio6 {
 			}
 		 
 		//Se imprime un mensaje de error en caso de que no se cumpla la primera condición
-		}else {
+		} else {
 			
 			System.out.println("Ha introducido valores no válidos.");
 			

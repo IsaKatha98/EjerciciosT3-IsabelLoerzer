@@ -2,7 +2,7 @@ package ejercicios;
 
 import java.util.Scanner;
 
-public class Ejercicio4 {
+public class Ejercicio4Eficiente {
 	
 	/*Para dos números dados, a y b, es posible calcular el máximo común divisor (el número más grande que divide a ambos) 
 	 * mediante un algoritmo ineficiente pero sencillo: desde el menor de a y b, ir buscando, de forma decreciente, el primer 

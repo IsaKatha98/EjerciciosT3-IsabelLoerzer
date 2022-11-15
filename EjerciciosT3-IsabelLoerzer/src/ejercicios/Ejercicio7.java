@@ -10,7 +10,7 @@ public class Ejercicio7 {
 		12321
 		1234321
 		
-		Las pruebas realizadas en este ejercicion son:
+		Las pruebas realizadas en este ejercicio son:
 		
 		- Introducir un valor 0 y que se imprima el mensaje de error.
 		- Introducir un valor númerico cualquiera (6) y que se imprima la pirámide de forma correcta.

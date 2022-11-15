@@ -13,7 +13,7 @@ public class Ejercicio3 {
 	Las pruebas a realizar serán las siguientes:
 	
 	- Introducir un valor 0. Se espera que no se imprima nada.
-	- Introducir un valor aleatoria. Se espera que se forme una pirámide correspondiente al número introducido.
+	- Introducir un valor aleatorio. Se espera que se forme una pirámide correspondiente al número introducido.
 	 */
 
 	public static void main(String[] args) {
