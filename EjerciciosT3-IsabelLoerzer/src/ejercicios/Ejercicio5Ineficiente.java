@@ -2,7 +2,7 @@ package ejercicios;
 
 import java.util.Scanner;
 
-public class MCD {
+public class Ejercicio5Ineficiente {
 
 	public static void main(String[] args) {
 		
@@ -44,6 +44,8 @@ public class MCD {
 							if (numA%i==0&&numB%i==0) {
 							
 								divisor=i;
+								
+								break;
 							}
 						}
 					
@@ -54,39 +56,35 @@ public class MCD {
 				
 				//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.
 					
-				} else if (numB<numA) {
-					
-			
+				} else  {
 					
 					for (int i=numB; i>=1; i--) {
 						
 						if (numA%i==0&&numB%i==0) {
 							
 							divisor=i;
+							
+							break;
 						}
 						
 					}
 					
 					//Imprimimos el resultado del bucle for.
 					
-					System.out.println("El mínimo común múltiplo es: "+divisor);
-				
-					
+					System.out.println("El mcd es: "+divisor);
+		
 				}
 						
-				}else {
+			}else {
 					
-					System.out.println("Ha introducido valores no válidos.");
+				System.out.println("Ha introducido valores no válidos.");
 					
-				}
+			}
 				
-				//Por último, cerramos el escáner.
+			//Por último, cerramos el escáner.
 				
-				sc.close();
+			sc.close();
 					
-				
-
-
 	}
 
 }

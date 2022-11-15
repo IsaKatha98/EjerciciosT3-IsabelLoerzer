@@ -2,7 +2,7 @@ package ejercicios;
 
 import java.util.Scanner;
 
-public class Ejercicio5 {
+public class Ejercicio5Eficiente {
 	
 	/*De forma similar a la actividad 4, realiza un programa que calcule el mínimo común múltiplo de dos números dados. 
 	 *En este caso, habrá que partir del máximo de los dos e ir incrementando hasta encontrar el primer número que sea 
@@ -47,9 +47,10 @@ public class Ejercicio5 {
 				
 				//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
 				
-					if (numA%i==0&&numB%i==0) {
+					if (i%numA==0&&i%numB==0) {
 					
 						multiplo=i;
+						break;
 					}
 				}
 			
@@ -65,9 +66,11 @@ public class Ejercicio5 {
 			
 			for (int i=1; i<=aux; i++) {
 				
-				if (numA%i==0&&numB%1==0) {
+				if (i%numA==0&&i%numB==0) {
 					
 					multiplo=i;
+					
+					break;
 				}
 				
 			}

@@ -9,6 +9,11 @@ public class Ejercicio7 {
 		121
 		12321
 		1234321
+		
+		Las pruebas realizadas en este ejercicion son:
+		
+		- Introducir un valor 0 y que se imprima el mensaje de error.
+		- Introducir un valor númerico cualquiera (6) y que se imprima la pirámide de forma correcta.
 */
 
 	public static void main(String[] args) {
@@ -27,48 +32,37 @@ public class Ejercicio7 {
 		System.out.print("Introduzca un número y pulse Intro: ");
 		num=sc.nextInt();
 		
-		int j=1;
-				
-				
-			/*Establecemos un for en el que se imprime un número por iteración. Primero, definimos las veces que va a repetirse la condición,
-			* es decir, el total de filas que tendrá la pirámide.*/
+		//Creamos una condición para que nos imprime un mensaje de error en caso de que num sea menor o igual a 0.
+		if (num>0) {
 			
-		for (int i=1; i<=num; i++) {
-		
-			System.out.println(i);
+			//Creamos un primer bucle que imprima la cantidad de filas que tiene la priámide.
 			
-			j++;
-			
-		
-			while (num>=j) {
+			for (int i=1; i<=num; i++) {
 				
-				System.out.print(j);
-			
-				for( j=1; j<=num; j++){
+				//Creamos un bucle para que imprima el valor de cada columna de la pirámide.
 				
+				for (int j=1; j<=i; j++) {
+					
 					System.out.print(j);
 					
-					continue;
-	
-		
-				//Dentro del bucle, establecemos otro bucle en el que la variable j imprimirá en la misma línea la variable i
-				
-			
-				}//Ponemos un salto de línea para que el bucle inicial se repita por cada línea, hasta llegar al número introducido.
-		
-		
-			}
-		
-			while (num<j) {
-				
-				for (j=num-1; j>=1; j--) {
-				
-					System.out.print(j);
-					
-					continue;
 				}
+				
+				//Ahora creamos un bucle que imprima los valores hacia n pero al revés.
+				
+				for (int k=i-1; k>=1;k--) {
+					
+					System.out.print(k);
+				}
+				
+			//Imprimimos un salto de línea para separar las filas (una fila por bucle).
+				
+			System.out.println("");
 			}
-	
+			
+			
+		} else {
+			
+			System.out.println("Ha introducido un valor no válido.");
 		}
 				
 		//Por último, cerramos el escáner.
