@@ -41,8 +41,7 @@ public class Ejercicio4 {
 	
 	if (numA!=0&&numB!=0) {
 	
-		//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.
-		
+		//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.		
 		
 			for (int i=1; i<=numA; i++) {
 			
@@ -63,7 +62,7 @@ public class Ejercicio4 {
 		
 	} else {
 		
-		System.out.println("Ha introducido valores no válidos.");
+		System.out.println("Los números son iguales.");
 		
 	}
 	

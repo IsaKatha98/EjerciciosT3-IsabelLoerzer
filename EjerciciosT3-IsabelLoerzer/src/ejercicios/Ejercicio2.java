@@ -9,7 +9,7 @@ public class Ejercicio2 {
 		//Declaramos las variables.
 		
 		int num; //Variable introducida por el usuario.
-		boolean esPrimo;
+		int contador=0;
 				
 		/*Creamos un escáner para poder leer los datos que introduzca el usuario por
 		la consola. */
@@ -26,22 +26,21 @@ public class Ejercicio2 {
 		if (num>0) {
 			
 			for (int i=2; i<=num; i++) {
+				contador++;
+				
+				for (int divisor=2; divisor<i; divisor++) {
 					
-				if (num%i==0) {
+					if (i%divisor==0) {
 						
-					esPrimo=false;
-					
-				System.out.println(i);
-						
+						contador--;
+						break;
 					}
-				
-				} 
-				
-				
-					
+				}
 				
 				
+			} 	
 			
+			System.out.println("Hay "+contador+" números primos entre 0 y "+num+" .");
 						
 			} else {
 					

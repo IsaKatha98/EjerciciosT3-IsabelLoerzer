@@ -14,6 +14,7 @@ public class Ejercicio5 {
 		
 		int numA;
 		int numB;
+		int aux;
 		int multiplo=0;
 		
 		/*Creamos un escáner para poder leer los datos que introduzca el usuario por
@@ -33,13 +34,14 @@ public class Ejercicio5 {
 		
 		if (numA!=0&&numB!=0) {
 		
+			aux=numA*numB;
 			//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.
 			
 				if (numA<numB) {
 					
-					int aux=numA*numB;
+					
 			
-					for (int i=numA; i<=aux; i++) {
+					for (int i=1; i<=aux; i++) {
 						
 				
 				
@@ -60,9 +62,8 @@ public class Ejercicio5 {
 			
 		} else {
 			
-			int aux =numA*numB;
 			
-			for (int i=numB; i<=aux; i++) {
+			for (int i=1; i<=aux; i++) {
 				
 				if (numA%i==0&&numB%1==0) {
 					
@@ -87,10 +88,6 @@ public class Ejercicio5 {
 		//Por último, cerramos el escáner.
 		
 		sc.close();
-			
-		
-
-		
 
 	}
 
