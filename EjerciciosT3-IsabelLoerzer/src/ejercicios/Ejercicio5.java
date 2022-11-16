@@ -44,54 +44,32 @@ public class Ejercicio5 {
 			//Multiplicamos los números introducidos para que haga de límite.
 			
 			aux=numA*numB;
-			
-				//En caso de que numA sea menor que numB.
-				if (numA<numB) {
 					
-					//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.
-					for (int i=1; i<=aux; i++) {
-				
-						//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable multiplo.
-						if (i%numA==0&&i%numB==0) {
-							
-							multiplo=i;
-							
-							//Forzamos la salida del bucle.
-							break;
-						}
-					}
-
-					//Imprimimos el resultado del bucle for.
-					System.out.println("El mínimo común múltiplo es: "+multiplo);
-				
-				//En caso de que numB sea mayor que numA.
-				} else {
-				
-				//Se repite el mismo bucle for.
+				//Establecemos un bucle que empiece en uno y termine en cuando se alcance numA y que vaya sumando uno por cada vuelta del bucle.
 				for (int i=1; i<=aux; i++) {
 				
+					//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable multiplo.
 					if (i%numA==0&&i%numB==0) {
-					
+							
 						multiplo=i;
-					
+							
+						//Forzamos la salida del bucle.
 						break;
 					}
-				
 				}
+
+			//Imprimimos el resultado del bucle for.
+			System.out.println("El mínimo común múltiplo es: "+multiplo);	
 			
-				//Imprimimos el resultado del bucle for.
-				System.out.println("El mínimo común múltiplo es: "+multiplo);	
+			//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.	
+			} else {
+			
+				System.out.println("Ha introducido valores no válidos.");	
 			}
 		
-		//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.	
-		} else {
-			
-			System.out.println("Ha introducido valores no válidos.");	
-		}
+		//Por último, cerramos el escáner.
 		
-	//Por último, cerramos el escáner.
-		
-	sc.close();
+		sc.close();
 
 	}
 
