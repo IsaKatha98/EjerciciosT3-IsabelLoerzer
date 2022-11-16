@@ -20,75 +20,75 @@ public class Ejercicio4Ineficiente {
 		
 		//Declaramos las variables
 		
-				int numA;
-				int numB;
-				int divisor=0;
+		int numA;
+		int numB;
+		int divisor=0;
 				
-				/*Creamos un escáner para poder leer los datos que introduzca el usuario por
-				la consola. */
+		/*Creamos un escáner para poder leer los datos que introduzca el usuario por
+		la consola. */
 															
-				Scanner sc= new Scanner (System.in);											
+		Scanner sc= new Scanner (System.in);											
 				
-				//Le pediremos al usuario que introduzca los datos y los guardaremos en la variable.
+		//Le pediremos al usuario que introduzca los datos y los guardaremos en la variable.
 				
-				System.out.print("Introduzca un número A y pulse Intro: ");
-				numA=sc.nextInt();
+		System.out.print("Introduzca un número A y pulse Intro: ");
+		numA=sc.nextInt();
 				
-				System.out.print("Introduzca un número B y pulse Intro: ");
-				numB=sc.nextInt();
+		System.out.print("Introduzca un número B y pulse Intro: ");
+		numB=sc.nextInt();
 				
-				//Instrucciones. Primero, establecemos una condición en la que debe ocurrir que  ambos números son distintos de 0.
-				if (numA!=0&&numB!=0) {
+		//Instrucciones. Primero, establecemos una condición en la que debe ocurrir que  ambos números son distintos de 0.
+		if (numA!=0&&numB!=0) {
 				
-					//En caso de que numA sea menor que B.
-					if (numA<numB) {
+			//En caso de que numA sea menor que B.
+			if (numA<numB) {
 							
-						//Establecemos un bucle que empiece en numA y termine en cuando se alcance 1 y que vaya restando uno por cada vuelta del bucle.
-						for (int i=numA; i>1; i--) {
+				//Establecemos un bucle que empiece en numA y termine en cuando se alcance 1 y que vaya restando uno por cada vuelta del bucle.
+				for (int i=numA; i>1; i--) {
 								
-							//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
-							if (numA%i==0&&numB%i==0) {
+					//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
+					if (numA%i==0&&numB%i==0) {
 							
-								divisor=i;
+						divisor=i;
 									
-								//Forzamos la salida del bucle.
-								break;
-							}
-						}
-					
-					//Imprimimos el resultado del bucle for.
-					System.out.println("El mcd es: "+divisor);
-				
-					//En caso de que numB sea menor que numA.	
-					} else  {
-					
-						//Establecemos un bucle que empiece en numB y termine en cuando se alcance 1 y que vaya restando uno por cada vuelta del bucle.
-						for (int i=numB; i>=1; i--) {
-						
-							//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
-							if (numA%i==0&&numB%i==0) {
-							
-								divisor=i;
-								
-								//Forzamos la salida del bucle.
-								break;
-							}	
-						}
-					
-					//Imprimimos el resultado del bucle for.
-					System.out.println("El mcd es: "+divisor);
+						//Forzamos la salida del bucle.
+						break;
 					}
-						
-				//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.				
-				} else {
-					
-					System.out.println("Ha introducido valores no válidos.");
-					
 				}
+					
+			//Imprimimos el resultado del bucle for.
+			System.out.println("El mcd es: "+divisor);
 				
-			//Por último, cerramos el escáner.
+			//En caso de que numB sea menor que numA.	
+			} else  {
+					
+				//Establecemos un bucle que empiece en numB y termine en cuando se alcance 1 y que vaya restando uno por cada vuelta del bucle.
+				for (int i=numB; i>=1; i--) {
+						
+					//Se especifica que en el momento en que el módulo de numA y numB, ambos sean cero, i se guardará en la variable divisor.
+					if (numA%i==0&&numB%i==0) {
+							
+						divisor=i;
+								
+						//Forzamos la salida del bucle.
+						break;
+					}	
+				}
+					
+				//Imprimimos el resultado del bucle for.
+				System.out.println("El mcd es: "+divisor);
+			}
+						
+			//Imprimimos un mensaje de error, en el caso de que se introduzca un cero.				
+			} else {
+					
+				System.out.println("Ha introducido valores no válidos.");
+					
+			}
 				
-			sc.close();
+		//Por último, cerramos el escáner.
+				
+		sc.close();
 					
 	}
 
